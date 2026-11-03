@@ -8,7 +8,7 @@ def export_csv(radky, soubor):
    with open(soubor, "w", encoding="utf-8") as f:
         f.write("model;bity;pamet_gb\n")
         for model, bity, gb in radky:
-            f.write(f"{model};{bity};{gb}\n")
+           f.write(f"{model};{bity};{str(gb).replace('.', ',')}\n")
 
 if __name__ == "__main__":
     print(f"7B v INT4: {pamet_gb(7e9, 4):.1f} GB")
