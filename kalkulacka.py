@@ -5,7 +5,7 @@ def pamet_gb(parametry, bity):
 
 def export_csv(radky, soubor):
     """Uloží výsledky do CSV souboru."""
-    with open(soubor, "w") as f:
+   with open(soubor, "w", encoding="utf-8") as f:
         f.write("model;bity;pamet_gb\n")
         for model, bity, gb in radky:
             f.write(f"{model};{bity};{gb}\n")
